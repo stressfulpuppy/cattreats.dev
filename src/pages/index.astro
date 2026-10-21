@@ -4,18 +4,25 @@ import Social from "../components/social.astro";
 ---
 
 <Main title="Charlotte :3">
-  <div class="bg-rose-pine-surface/65 text-rose-pine-subtle flex flex-col gap-8 rounded-lg p-4 backdrop-blur-md md:grid md:w-5xl md:grid-cols-3">
-    <div class="bg-rose-pine-overlay/65 col-span-2 row-span-2 flex items-center gap-4 rounded-lg p-2 md:order-0 md:flex-row">
+  <div class="bg-ctp-base/40 gap-4 rounded-2xl p-4 text-base backdrop-blur-sm md:grid md:h-128 md:w-4xl md:grid-cols-3 md:grid-rows-3">
+    <div class="col-span-2 row-span-1 flex w-full flex-row items-center gap-4 rounded-lg p-4">
       <img
         src="/img/pfp.jpg"
+        class="h-32 w-32 rounded-full"
         alt="Charlotte's profile picture"
-        class="ml-4 h-16 w-16 rounded-full md:h-32 md:w-32"
-        loading="lazy"
       />
-      <div class="order-1 flex flex-col p-2">
-        <h1 class="text-rose-pine-text text-3xl font-bold md:text-4xl">Charlotte</h1>
-        <span class="text-md md:text-lg"><span id="username">@somnocat</span> <span>• she/her</span></span>
-        <div class="mt-2 flex gap-1 text-2xl md:text-4xl">
+      <div class="text-ctp-subtext1 row-span-1 flex flex-col">
+        <h1 class="text-ctp-lavender text-4xl font-bold">Charlotte</h1>
+        <span class="text-lg">
+          <span
+            id="username"
+            class="font-medium"
+          >
+            @stressfulpuppy
+          </span>
+          <span> • she/her</span>
+        </span>
+        <div class="text-ctp-subtext0 mt-2 flex flex-row gap-1 text-3xl">
           <Social
             hover="@stressfulpuppy"
             icon="fa7-brands:github"
@@ -39,41 +46,48 @@ import Social from "../components/social.astro";
         </div>
       </div>
     </div>
-    <div class="bg-rose-pine-overlay/65 order-3 col-span-1 row-span-4 flex flex-col gap-1 rounded-lg p-2 md:order-0">
-      <h2 class="text-rose-pine-text text-xl font-bold md:text-2xl">projects!</h2>
+
+    <div class="text-ctp-subtext1 rounded-lg p-2 text-lg leading-relaxed md:col-span-2 md:row-span-2">
+      <h2 class="text-ctp-text text-2xl font-bold">about me</h2>
+      <p>im charlotte, a sixteen-year-old stressed puppygirl <span class="text-nowrap">:(</span></p>
+      <p>i'm a furry, too. my self-named sona (who's part-cat, part-dog) is loosely based off the colours of the monster ultra fantasy ruby red can!</p>
+      <p>i'm reasonably comfortable with astro and javascript, and i hope to major in IT, assuming that's still an industry when I graduate... day to day, i use windows & vscode, and an ipad from my school. i am reasonably comfortable using linux on both servers and clients</p>
+    </div>
+
+    <div class="text-ctp-subtext1 rounded-lg p-2 text-lg md:col-span-1 md:col-start-3 md:row-span-3 md:row-start-1">
+      <h2 class="text-ctp-text text-2xl font-bold">projects!!</h2>
       <ul>
         <li>
-          <h3 class="text-rose-pine-love leading-relaxed font-bold md:text-xl">NestRec</h3>
-          <p class="text-md leading-relaxed md:text-lg">
-            i'm currently working on NestRec, a google <span class="font-bold">nest</span> hub <span class="font-bold">rec</span>reation meant to be more private and have no voice assistant. i hope to finish it soon and open source it when i'm done! but, like everything, i'm held back by cost of parts. 😵‍💫 for its 'software', i am currently using astro and javascript.
-          </p>
+          <h3 class="text-ctp-green text-xl font-semibold underline-offset-2 hover:underline">
+            <a
+              href="https://tadpole.cattreats.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              >tadpole</a
+            >
+          </h3>
+          <p>tadpole is a lightweight file host with discord authentication, written in astro and typescript.</p>
+          <a
+            href="https://github.com/stressfulpuppy/tadpole"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-ctp-subtext0 hover:text-ctp-green underline underline-offset-2"
+            >source</a
+          >
         </li>
         <li>
-          <h3 class="font-bold md:text-xl">...</h3>
-          <p class="md:text-lg">i don't really have any more projects... <span class="text-nowrap">:3</span></p>
+          <h3 class="text-ctp-red text-xl font-semibold underline-offset-2 hover:underline">nestrec</h3>
+          <p>nestrec is a hardware and software <span class="font-bold">rec</span>reation of the google <span class="font-bold">nest</span> hub, intended to be more private. i hope that once i finish it, i can make it open source! but, like everything, i'm held back by cost of parts.</p>
         </li>
       </ul>
     </div>
-    <div class="bg-rose-pine-overlay/65 order-2 col-span-2 row-span-3 flex flex-col gap-1 rounded-lg p-2 md:order-0">
-      <h2 class="text-rose-pine-text text-xl font-bold md:text-2xl">about me</h2>
-      <p class="text-md leading-relaxed md:text-lg">i'm Charlotte, <!-- <span class="text-rose-pine-muted italic">(or Shade, Catnip),</span>--> a (sixteen-year-old) very stressed puppygirl. <span class="text-nowrap">:(</span></p>
-      <p class="text-md leading-relaxed md:text-lg">i'm a furry, too. my self-named sona (who's part-cat, part-dog) is loosely based off the colours of the monster ultra fantasy ruby red!</p>
-      <p class="text-md leading-relaxed md:text-lg">i am not a developer, but i'm reasonably comfortable with some things, like html or basic javascript. i hope to major in IT, if that's still an industry when I graduate... <span class="text-nowrap">:c</span> day to day, i use windows & vscode, and an ipad from my school. i am reasonably comfortable using linux on both servers and clients. i also really like portal. <span class="text-nowrap">:D</span></p>
-    </div>
-    <div class="bg-rose-pine-overlay/65 order-4 col-span-1 col-start-3 row-span-1 row-start-5 flex items-center justify-center rounded-lg md:order-0">
-      <!-- i actually think this is too wide for it's text, but what am i to do? -->
-      <img
-        alt="somnocat's discord profile widget"
-        src="https://lanyard.cnrad.dev/api/1408956378600702042?hideActivity=true&showDisplayName=true&hideSpotify=true&bg=00000000"
-        class="md:h-fit"
-      />
-    </div>
   </div>
-  <div class="bg-rose-pine-surface/40 text-rose-pine-subtle mt-6 rounded-full p-2 underline underline-offset-2 backdrop-blur-md">
+  <div class="bg-ctp-base/40 text-ctp-subtext0 mt-6 mb-4 rounded-full p-2 underline underline-offset-2 backdrop-blur-md md:mb-0">
     <a
       href="http://github.com/stressfulpuppy/cattreats.dev"
       target="_blank"
-      rel="noopener noreferrer">
+      rel="noopener noreferrer"
+    >
       made by a puppy. <span class="text-nowrap">:3</span>
     </a>
   </div>

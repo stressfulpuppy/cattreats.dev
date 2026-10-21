@@ -8,14 +8,14 @@ import { Icon } from "astro-icon/components";
   target="_blank"
   rel="me"
   data-hover-name=`${hover}`
-  class="icons hover:text-rose-pine-foam"
+  class="icons hover:text-ctp-lavender"
 >
   <Icon name=`${icon}` />
 </a>
 
 <script>
   const nameText = document.getElementById("username");
-  const defaultName = "@stressfulpuppy";
+  const defaultName = nameText?.textContent;
   const icons = document.querySelectorAll(".icons");
   icons.forEach((element) => {
     const newName = element.dataset.hoverName;
